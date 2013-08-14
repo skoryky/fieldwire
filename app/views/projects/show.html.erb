@@ -1,0 +1,16 @@
+<h1>
+  <%= @project.name %>
+</h1>
+
+<h2>Floorplans</h2>
+<% @floorplans.each do |floorplan| %>
+  <%= floorplan.display_name %>
+  <ol>
+    <% floorplan.blueprints.each do |blueprint| %>
+      <li><%= image_tag blueprint.file.url(:thumb) %>
+    <% end %>
+  </ol>
+  <br>
+<% end %>
+
+<%= link_to 'Add a floorplan', "#{project_path(@project)}/floorplans" %>

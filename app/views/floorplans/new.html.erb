@@ -1,0 +1,12 @@
+<%= form_for @floorplan, :html => {:multipart => true} do |f| %>
+  <%= f.label :floorplan_name %>
+  <%= f.text_field :display_name %>
+  <br>
+
+  <%= f.label :files %>
+  <%= file_field_tag 'blueprint_file', :multiple => true, :name => 'blueprint[][file]' %>
+  <br>
+
+  <input type="hidden" id="project_id" name="project_id" value="<%= @project.id %>">
+  <%= f.submit 'Create floorplan' %>
+<% end %>

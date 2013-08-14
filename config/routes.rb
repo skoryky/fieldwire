@@ -1,4 +1,12 @@
 Fieldwire::Application.routes.draw do
+
+  root 'projects#index'
+
+  resources :projects
+  resources :floorplans
+
+  get 'projects/:id/floorplans' => 'floorplans#new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

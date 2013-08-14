@@ -4,6 +4,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 gem 'aws-sdk'
+gem 'carrierwave'
+gem 'fog'
+gem 'mini_magick'
+
 group :development do
   gem 'rspec-rails', '2.13.1'
 

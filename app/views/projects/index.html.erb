@@ -1,0 +1,10 @@
+<h1>Existing projects</h1>
+
+<% @projects.each do |project| %>
+  <%= link_to project.name, project_path(project.id) %>
+  <br>
+<% end %>
+
+<br>
+
+<%= link_to 'Create a new project', '/projects/new' %>
